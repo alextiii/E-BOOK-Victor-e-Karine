@@ -96,7 +96,7 @@
     <h2>E-BOOK Victor e Karine</h2>
     <p class="descricao">Aqui contém E-BOOK completo de <br> Karine Rodrigues e Victor Hugo Dias</p>
 
-    <div class="card" onclick="abrirPDF()">
+    <div class="card" id="cardEbook" onclick="abrirPDF()">
       <img src="https://raw.githubusercontent.com/alextiii/E-BOOK-Victor-e-Karine/main/IMG_3490.JPEG" alt="Capa e-book" class="capa">
       <div class="info">
         <h3>E-BOOK Karine Rodrigues e Victor Hugo Dias</h3>
@@ -113,6 +113,9 @@
 
   <script>
     function abrirPDF() {
+      // Esconde o card
+      document.getElementById("cardEbook").style.display = "none";
+      // Mostra o PDF
       const viewer = document.getElementById("pdfViewer");
       viewer.src = "https://github.com/alextiii/E-BOOK-Victor-e-Karine/raw/main/_E-BOOK%20Victor%20Hugo%20Dias%20e%20Karine_compressed%20(1).pdf";
       viewer.style.display = "block";
